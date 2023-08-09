@@ -19,10 +19,12 @@
   --switch-circle-pos: 2px;
   --opp-bg: #383838;
   --text-bg: white;
+  --button-bg: white;
 }
 :root[data-theme="dark"]{
   /* --body-bg: #3C3A47; */
-  --body-bg: #383838;
+  /* --body-bg: #383838; */
+  --body-bg: #151515;
   --main-bg: rgb(1, 133, 133);
   --title: white;
   --switch-circle-bg: #7190FF;
@@ -32,7 +34,9 @@
   --switch-bg: #2D2C35;
   --opp-bg: white;
   --text-bg: black;
+  --button-bg: #1f1f1f;
 }
+
 
 
 
@@ -145,11 +149,12 @@ nav img{
 
 }
 .prim-color{
-  color: var(--main-bg);
+  /* color: var(--main-bg); */
+  color: rgb(75, 206, 206);
 
 }
 .btn-group a {
-  background-color: white; /* Green background */
+  background-color: var(--button-bg); /* Green background */
   border: 1.5px solid green; /* Green border */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
@@ -221,7 +226,7 @@ p {
 }
 
 .course-col {
-  color: var(--text-bg);
+  color: var(--title);
   flex-basis: 48%; /* Adjusted the width to 48% to account for margins */
   background: rgb(75, 206, 206);
   border-radius: 10px;
@@ -252,7 +257,7 @@ p {
 }
 
 .skills{
-  color: black ;
+  color: var(--title) ;
 }
 .skills:hover{
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
@@ -260,14 +265,15 @@ p {
 
 .course-col p{
   display: block;
-  color: var(--text-bg);
+  color: var(--title);
   text-align: left;
 }
 .left-box {
   flex-basis: 70%; /* Set the left box to take up 70% of the width */
   margin-left: 0%;
   margin-top: 0%;
-  background-color: var(--opp-bg);
+  background-color: var(--button-bg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35); /* Add a shadow on hover */
 }
 .left-box p{
   padding: 15px;
@@ -276,7 +282,8 @@ p {
   flex-basis: 28%; /* Set the right box to take up 28% of the width */
   margin-left: 0%;
   margin-top: 0%;
-  background-color: var(--opp-bg);
+  background-color: var(--button-bg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35); /* Add a shadow on hover */
 
 }
 
