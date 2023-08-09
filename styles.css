@@ -17,8 +17,6 @@
   --icon-sun: #997F44;
   --icon-moon: #B1B0B5;
   --switch-circle-pos: 2px;
-  --opp-bg: #383838;
-  --text-bg: white;
   --button-bg: white;
 }
 :root[data-theme="dark"]{
@@ -32,8 +30,6 @@
   --icon-moon: #B1B0B5;
   --icon-sun: #B1B0B5;
   --switch-bg: #2D2C35;
-  --opp-bg: white;
-  --text-bg: black;
   --button-bg: #1f1f1f;
 }
 
@@ -489,15 +485,15 @@ input, textarea{
   padding: .5rem;
   font-size: 18px;
   border-radius: 5px;
-  background-color: var(--body-bg);
+  background-color: var(--button-bg);
   color: var(--title);
   
 }
 #sendBtn{
-  border: 0;
-  background-color: black;
+  border: 1px solid var(--title);
+  background-color: var(--button-bg);
   padding: .5rem;
-  color: white;
+  color: var(--title);
   margin: 1rem 0;
   width: auto;
   border-radius: 5px;
@@ -543,4 +539,27 @@ input, textarea{
   font-size: 30px;
   display: block;
   text-align: left;
+}
+
+.responsive-image {
+  max-width: 100%; /* Ensure the image does not exceed its parent's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Remove any default margins or spacing */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Define a media query for smaller screens (phones) */
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+  
+  /* Adjust padding and margin for the image container */
+  .right-box {
+    margin-left: 0;
+    padding: 0;
+  }
+  .left-box{
+    margin-top: 20%;
+  }
 }
