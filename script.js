@@ -15,3 +15,9 @@ const switchTheme = (event) => {
 document.querySelector('#theme-switcher').addEventListener('click', switchTheme);
 
 
+
+const featureComingSoonBtn = document.getElementById('featureComingSoonBtn');
+
+featureComingSoonBtn.addEventListener('click', async () => {
+  const result = confirm("This feature will be added soon. Thank you for your patience");
+})

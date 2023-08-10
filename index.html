@@ -16,7 +16,7 @@
       document.documentElement.setAttribute('data-theme','dark')
     }
     </script>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=karla">
   <script src="https://kit.fontawesome.com/3e1ee454ed.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -69,10 +69,14 @@
 
 <section id="about" class="background">
   
-  <h2 class="title">About</h2>
+  <h2 class="title" id="about-title">About</h2>
   <div class="parent">
-    <!-- <div class="wide"><img class="clip" src="pic999.jpg" alt=""></div> -->
-    <div class="narrow">say</div>
+    <div class="wide"><img class="clip" src="pic999.jpg" alt=""></div>
+    <div class="narrow">
+      <p>
+        Hi, my name is Nabil Badran and I’m an A-level student from London, currently working at <span><a href="https://finetutors.co.uk/" class="job">Fine Tutors</a></span>. I’m studying Maths, Computer Science, and Physics. <br><br>
+        My innate passion for computer science drives me to learn more about programming languages and explore the different use cases of programming. <br><br>For example, how it could be used in finding the most efficient path between two points to how ai could be used to optimise solar panels.
+    </div>
   </div>
 </section>
 
@@ -91,18 +95,18 @@
   <div class="row">
     <div class="course-col skills ">
 
-      <h3>Hard skills</h3>
+      <h3>Tech Toolkit</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
 
     </div>
     <div class="course-col skills">
-      <h3>Coding languages</h3>
+      <h3>Innovative Solutions</h3>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
 
     </div>
     <div class="course-col skills">
-      <h3>Soft skills</h3>
+      <h3>Continuous Learning</h3>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
 
@@ -110,6 +114,7 @@
   </div>
     
 </section>
+
 
 </div>
 
@@ -119,7 +124,7 @@
 
 <section id="project">
 <div>
-  <h2 class="title">PROJECT</h2>
+  <h2 class="title">PROJECT <span class="subscript">(more coming soon)</span></h2>
 </div>
 <div>
 
@@ -132,32 +137,15 @@
       <h3>Face id</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
       <div class="button-wrapper">
-        <a href="face_id.html" >Case study</a>
+        <a href="working_progress.html" >Case study<i class="fa-brands fa-python"></i></a>
+        
         <!-- <a href="face_id.html" >Case study</a> -->
       </div>
     </div>
     <div class="course-col right-box">
       <img src="image1.png" alt="image of working face id" class="responsive-image">
-      <i class="fa-brands fa-python"></i>
     </div>
   </div>
-
-  <div class="row">
-    <div class="course-col left-box">
-      <h3>Face id</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
-      <div class="button-wrapper">
-        <a href="face_id.html" >Case study</a>
-        <!-- <a href="face_id.html" >Case study</a> -->
-      </div>
-    </div>
-    <div class="course-col right-box">
-      <img src="image1.png" alt="image of working face id" class="responsive-image">
-      <i class="fa-brands fa-python"></i>
-    </div>
-  </div>
-
-
 </section>
 
 
@@ -181,13 +169,24 @@
 </section>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
 <!-- -----------------------------------------contact section-------------------------------------- -->
 <section id="contact" class="background">
   <div>
     <h2 class="title3">CONTACT</h2>
   </div>
   <div>
-    <form class="submission-form" onsubmit="return validateForm()" id="submission-form" name="submission-form">
+    <form class="submission-form">
       
       <div>
         <label for="Name">Name</label>
@@ -213,7 +212,7 @@
         <textarea id="experiences" name="experiences" rows="4" cols="50"></textarea>
         <span id="experiences-error" class="error-message"></span>
       </div>
-      <input type="submit" value="Send" id="sendBtn">
+      <input type="submit" value="Send" class="sendBtn" id="featureComingSoonBtn">
       
 
     </form>
