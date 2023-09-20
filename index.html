@@ -18,8 +18,9 @@
     </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=karla">
   <script src="https://kit.fontawesome.com/3e1ee454ed.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -49,12 +50,12 @@
     </nav>
   </div>
 
-  <div class="center_both"><a>Hi, I'm <span class="prim-color">Nabil</span>.
+  <div class="center_both "><a>Hi, I'm <span class="prim-color">Nabil</span>.
     <br>An aspiring software engineer.</a>
     <div class="btn-group">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#project">Project</a>
+      <a href="#project">Projects</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -63,6 +64,7 @@
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
     </svg>
+  
 </div>
 </section>
 <!------------------------------------ About sectionn ------------------------------------ -->
@@ -71,10 +73,10 @@
   
   <h2 class="title" id="about-title">About</h2>
   <div class="parent">
-    <div class="wide"><img class="clip" src="pic999.jpg" alt=""></div>
+    <div class="wide"><img class="clip" src="images/pic999.jpg" alt=""></div>
     <div class="narrow">
       <p>
-        Hi, my name is Nabil Badran and I’m an A-level student from London, currently working at <span><a href="https://finetutors.co.uk/" class="job">Fine Tutors</a></span>. I’m studying Maths, Computer Science, and Physics. <br><br>
+        Hi, my name is Nabil Badran and I’m a year 13 A-level student from London, currently working at <span><a href="https://finetutors.co.uk/"  target="_blank"  class="job">Fine Tutors</a></span>. I’m studying Maths, Computer Science, and Physics. <br><br>
         My innate passion for computer science drives me to learn more about programming languages and explore the different use cases of programming. <br><br>For example, how it could be used in finding the most efficient path between two points to how ai could be used to optimise solar panels. </p>
     </div>
   </div>
@@ -91,26 +93,37 @@
 <!------------------------------------ Skills sectionn ------------------------------------ -->
 
 <h2 class="title2">SKILLS</h2>
-<section class="course">
+<section class="course">  
   <div class="row">
     <div class="course-col skills ">
 
-      <h3>Tech Toolkit</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
+      <h3>Technical Skills</h3>
+      <p>I have a strong understanding of python. I also know the basic understanding of php and Javascript as I have completed various project that include those languages.</p>
 
     </div>
     <div class="course-col skills">
-      <h3>Innovative Solutions</h3>
+      <h3>Soft Skills and Qualities</h3>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
+      <p> Communication, problem solving, critical thinking, initiative-taking, eager to learn
+        with a positive attitude, time management, teamwork, organisation</p>
 
     </div>
     <div class="course-col skills">
-      <h3>Continuous Learning</h3>
+      <div id="List">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
+
+      <h3>Certifications and Achievements </h3>
+      <ul>
+        <li>Google Crash Course in Python</li> <br>
+        <li>Google Start the UX Design Process: Empathise, Define and Ideate</li>
+        <br>
+        <li>Google Foundation of User Experience Design</li>
+        <br>
+        <li>2x Maths Senior Challenge participation</li>
+      </ul>
 
     </div>
+  </div>
   </div>
     
 </section>
@@ -124,7 +137,7 @@
 
 <section id="project">
 <div>
-  <h2 class="title">PROJECT <span class="subscript">(more coming soon)</span></h2>
+  <h2 class="title">PROJECTS <span class="subscript"></span></h2>
 </div>
 <div>
 
@@ -134,16 +147,32 @@
 <section class="course">
   <div class="row">
     <div class="course-col left-box">
-      <h3>Face id</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices congue accumsan. Mauris justo tortor, pellentesque eget nibh eget, ullamcorper venenatis neque. Duis non urna sodales, bibendum risus at, sollicitudin dui. </p>
+      <h3>Face ID</h3>
+      <p>A program which can identify people. It is given a set of pictures of people's faces and then an algorithm is run to learn those images so that it can identify who is who.  </p>
       <div class="button-wrapper">
-        <a href="working_progress.html" >Case study<i class="fa-brands fa-python"></i></a>
+        <a href="face_id_case.html" >Case study<i class="fa-brands fa-python"></i></a>
         
         <!-- <a href="face_id.html" >Case study</a> -->
       </div>
     </div>
     <div class="course-col right-box">
-      <img src="image1.png" alt="image of working face id" class="responsive-image">
+      <img src="images/image1.png" alt="image of working face id" class="responsive-image">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="course-col left-box">
+      <h3>Taxi Bird</h3>
+      <p> A birdbox in the shape of a taxi but with twist! It's equiped with a rasberry pi and a camera allowing it to take pictures of birds when motion is detected, identify the bird and send the picture with the time to me via email and text.</p>
+      <div class="button-wrapper">
+        <a href="taxi_bird_case.html" >Case study<i class="fa-brands fa-python"></i></a>
+        
+        <!-- <a href="face_id.html" >Case study</a> -->
+      </div>
+    </div>
+    <div class="course-col right-box">
+
+      <img src="images/with_stand-removebg-preview (1).png" alt="image of working face id" class="responsive-image">
     </div>
   </div>
 </section>
@@ -221,6 +250,6 @@
 <br>
 </section>
 
-<script src="script.js"></script>
+<script src="script copy.js"></script>
 </body>
 </html>
