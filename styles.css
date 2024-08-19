@@ -8,28 +8,11 @@ html{
   padding: 0;
   font-family: "Karla", sans-serif;
   position: relative;
-  box-sizing: border-box;
 }
 :root{
   --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3 ease-in-out;
-  --bg-color: white;
-  --typewriterSpeed: 4s;
-  --typewriterCharacters: 38;
 }
 :root[data-theme="light"]{
-  --body-bg: #151515;
-  --main-bg: rgb(1, 133, 133);
-  --title: white;
-  --switch-circle-bg: #7190FF;
-  --switch-circle-pos: 3rem;
-  --icon-moon: #B1B0B5;
-  --icon-sun: #B1B0B5;
-  --switch-bg: #2D2C35;
-  --button-bg: #1f1f1f;
-  --titleop: black;
-  /*
-  Acc colours for light theme
-  
   --body-bg: white;
   --main-bg: rgb(1, 133, 133);
   --title: black;
@@ -40,7 +23,7 @@ html{
   --icon-moon: #B1B0B5;
   --switch-circle-pos: 2px;
   --button-bg: white;
-  --titleop: white; */
+  --titleop: white;
 }
 :root[data-theme="dark"]{
   /* --body-bg: #3C3A47; */
@@ -57,26 +40,24 @@ html{
   --titleop: black;
 }
 
-
-/* nav bar */
-nav{
-  /* background-color: #333; */
-  display: flex;
-  padding: 1% 6%;
-  justify-content: space-between;
-  align-items: center;
+#theme-switcher {
+  display: flex; /* Use flexbox to control the size */
+  align-items: center; /* Center the content vertically */
+  margin-left: 20px; /* Add margin to create space between the links */
+  margin-top: 5px;
+  padding: 14px 16px; /* Adjust padding to control the size */
+  border-radius: 50px; /* Keep the border-radius */
+  background-color: var(--switch-bg); /* Keep the background color */
+  cursor: pointer; /* Keep cursor pointer */
+  transition: 0.3s; /* Keep transition */
 }
 
+/* this is the content css code for the theme switcher: */
 #theme-switcher{
-  background-color: var(--switch-bg);
-  border-radius: 50px;
-  display: flexbox;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.33rem;
-  cursor: pointer;
-  padding: 0.66rem ;
-  padding-top: 1rem !important;
-  transition: 0.3s;
+  padding: 13px 16px; /* Adjusted to create space around the content */
 }
 
 #theme-switcher::before {
@@ -87,16 +68,16 @@ nav{
   background-color: var(--switch-circle-bg);
   border-radius: 50px;
   z-index: 0;
-  left: 0;
-  top: 6px;
-  transform: translateX(var(--switch-circle-pos));
+  left: 4px;
+  top: 50%; /* Adjusted to center the circle vertically */
+  transform: translateX(var(--switch-circle-pos)) translateY(-50%); /* Adjusted to center the circle vertically */
   transition: .3s;
 }
 
 #theme-switcher svg{
-  z-index: 1;
-  transition: .3s;
+  margin: auto;
 }
+
 
 #icon-sun{
   fill: var(--icon-sun);
@@ -109,18 +90,9 @@ nav{
 }
 
 
-.center_both{
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -70%);
-  padding: 10px;
-  margin-left: 200px;
-  color: var(--title);
-}
 
 
 
-/* main texts */
 /* #theme-switcher{
   background-color: var(--switch-bg);
   border-radius: 50px;
@@ -167,117 +139,25 @@ body{
   transition: .3s;
 }
 
+.shape_image{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 
 /* -----------------------navbar-------------- */
-header{
-  background-color: #212529 !important;
-}
-
-li{
-  list-style: none;
-} 
-a{
-  color: white;
-  text-decoration: none;
-}
-.navbar{
-  min-height: 70px;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 24px;
-  z-index: 1;
-}
-.stickycontainer{
-  z-index: 1;
-}
-
-.nav-menu{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-  padding: 30px 0;  
-  background-color: #212529 !important;
-  z-index: 1;
-}
-.nav-branding{
-  font-size: 2rem;
-}
-
-.nav-link{
-  transition: 0.7s ease;
-}
-
-.nav-link:hover{
-  color: blue;
-}
-.hamburger{
-  display: none;
-  cursor: pointer;
-}
-
-.bar{
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: white;
-}
-
-@media(max-width:768px){
-  .hamburger{
-    display: block;
-  }
-
-
-  .hamburger.active .bar:nth-child(2){
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  .nav-menu{
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #212529 !important;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    /* padding: 20px 0; */
-  }
-
-  .nav-item{
-    margin: 10 px 0;
-  }
-
-  .nav-menu.active{
-    left: 0;
-  }
-}
-
-
-
-
-/* .topnav {
-  position: fixed; 
+.topnav {
+  position: fixed; /* Set the navigation bar to be fixed */
   top: 0;
   left: 0;
   right: 0;
   background-color: #212529;
-   z-index: 100; 
+  z-index: 100; /* Ensure the navigation bar appears on top of other content */
 }
 
 .topnav a {
-  float: right; 
+  float: right; /* Set all links to float right */
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -287,7 +167,7 @@ a{
 }
 
 .topnav a:first-child {
-  float: left; 
+  float: left; /* Set the first link (Home) to float left */
 }
 
 .topnav a:hover {
@@ -305,9 +185,9 @@ a{
   display: none;
 }
 .shift{
-  margin-right: 1px;
-} */
-/* old: */
+  margin-right: 100px;
+}
+
 /* @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -326,140 +206,30 @@ a{
     text-align: left;
   }
 } */
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .topnav {
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
-    position: relative; 
+      display: flex;
+      justify-content: space-between; /* This will place the first child and icon on opposite ends */
   }
 
   .topnav a:not(:first-child) {
-    display: none;
+      display: none; /* Hide other links initially */
   }
 
   .topnav a.icon {
-    display: block;
+      display: block; /* Always display the hamburger icon */
   }
 
+  .topnav.responsive a:not(:first-child) {
+      display: block;
+      text-align: left;
+  }
+
+  /* Hide the theme switcher on smaller screens */
   #theme-switcher {
-    display: flex;
-  }
-
-  .topnav.responsive {
-    position: relative;
-    z-index: 100 !important;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute; 
-    right: 0;
-    top: 0;
-    z-index: 999;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .active {
-    margin-left: 0!important;
-  }
-} */
-
-
-@media screen and (max-width: 900px) {
-  header.show-mobile-menu::before {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    backdrop-filter: blur(5px);
-  }
-
-  .navbar .menu-links {
-    height: 100vh;
-    max-width: 300px;
-    width: 100%;
-    background: #fff;
-    position: fixed;
-    left: -300px;
-    top: 0;
-    display: block;
-    padding: 75px 40px 0;
-    transition: left 0.2s ease;
-  }
-
-  header.show-mobile-menu .navbar .menu-links {
-    left: 0;
-  }
-
-  .navbar .menu-links li {
-    margin-bottom: 30px;
-  }
-
-  .navbar .menu-links li a {
-    color: #000;
-    font-size: 1.1rem;
-  }
-
-  .navbar .menu-links .join-btn a {
-    padding: 0;
-  }
-
-  .navbar .menu-links .join-btn a:hover {
-    color: #1dbf73;
-    background: none;
-  }
-
-  .navbar :is(#close-menu-btn, #hamburger-btn) {
-    display: block;
-  }
-
-  .hero-section {
-    background: none;
-  }
-
-  .hero-section .content {
-    margin: 0 auto 80px;
-  }
-
-  .hero-section .content :is(h1, .search-form) {
-    max-width: 100%;
-  }
-
-  .hero-section .content h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    line-height: 55px;
-  }
-
-  .hero-section .search-form {
-    display: block;
-    margin-top: 20px;
-  }
-
-  .hero-section .search-form input {
-    border-radius: 4px;
-  }
-  
-  .hero-section .search-form button {
-    margin-top: 10px;
-    border-radius: 4px;
-    width: 100%;
-  }
-
-  .hero-section .popular-tags {
-    display: none;
+      display: none;
   }
 }
-
-
-
-
 
 
 /* .navbar1fix{
@@ -503,14 +273,7 @@ nav img{
 } */
 #mypdf{
   width: 100%;
-  height: 870px;
-}
-.pdf{
-  border: 5px solid;
-  margin: auto;
-  margin-top: 50px;
-  width: 50%;
-  padding: 10px
+  height: 975px;
 }
 .center{
   border: 5px solid;
@@ -518,48 +281,34 @@ nav img{
   width: 50%;
   padding: 10px
 }
-
-
-.centered-element {
+.center_both{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -70%);
   padding: 10px;
+  margin-left: 200px;
   color: var(--title);
 }
-
-.centered-element a {
-  font-size: 3.5rem;
-  font-weight: 600;
-}
-
-.center_container {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Ensure the container takes up the full viewport height */
-  text-align: center; /* Center the text inside the div */
-}
-
-/* .center_both a{
+.center_both a{
   font-size: 3.5rem;
   font-weight: 600;
 
-} */
+}
 .prim-color{
   /* color: var(--main-bg); */
   color: rgb(75, 206, 206);
 
 }
-.btn-group{
-  display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
-}
 .btn-group a {
+  background-color: var(--button-bg); /* Green background */
+  border: 1.5px solid green; /* Green border */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
   margin-top: 10px;
   border-radius: 10px;
   margin-right: 10px;
+  color: var(--main-bg); /* White text */
   text-decoration: none;
   font-size: 20px;
 }
@@ -581,30 +330,11 @@ nav img{
 }
 .btn-group a:hover{
   transition: 0.25s;
-  /* background-color: var(--main-bg); */
+  background-color: var(--main-bg);
   color: white;
   transform: scale(.95);
 }
-@media screen and (max-width: 768px) {
-  .btn-group a {
-    padding: 8px 16px; /* Adjust padding for smaller screens */
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-}
 
-/* Media query for even smaller screens */
-@media screen and (max-width: 480px) {
-  .btn-group {
-    flex-direction: column; /* Stack buttons vertically for very small screens */
-    align-items: flex-start; /* Align buttons to the left for very small screens */
-  }
-
-  .btn-group a {
-    padding: 8px 16px; /* Adjust padding for very small screens */
-    font-size: 14px; /* Further adjust font size for very small screens */
-    margin-right: 0; /* Remove right margin to prevent stacking issues */
-  }
-}
 .full{
   height: 100vh;
   overflow: auto;
@@ -703,34 +433,24 @@ p {
   text-align: left;
 }
 .left-box {
-  flex-basis: 45%; /* Set the left box to take up 70% of the width */
+  flex-basis: 70%; /* Set the left box to take up 70% of the width */
   margin-left: 0%;
   margin-top: 0%;
   background-color: var(--button-bg);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35); /* Add a shadow on hover */
-
 }
 .left-box p{
   padding: 15px;
 }
 .right-box {
-  flex-basis: 54%; /* Set the right box to take up 28% of the width */
+  flex-basis: 28%; /* Set the right box to take up 28% of the width */
   margin-left: 0%;
   margin-top: 0%;
   background-color: var(--button-bg);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35); /* Add a shadow on hover */
-  height: 400px;
-  padding: 0px;
+
 }
 
-.right-box img{
-  width: 100%; /* Make the image width 100% of the right-box width */
-  height: auto; /* Allow the height to adjust proportionally */
-  
-}
-#taxi{
-  margin-top: 50px;
-}
 h3 {
   text-align: center;
   font-weight: 600;
@@ -745,9 +465,6 @@ h3 {
   }
   .center_both {
     margin-left: 0px;
-  }
-  #taxi{
-    margin-top: 0px;
   }
 }
 
@@ -775,7 +492,7 @@ h3 {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  height: 79px;
   transform: rotateY(180deg);
 }
 
@@ -799,7 +516,7 @@ h3 {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  height: 79px;
   transform: rotateY(180deg);
 }
 
@@ -807,7 +524,7 @@ h3 {
   fill: #018585;
 }
 .title2{
-  padding-top: 130px;
+  padding-top: 100px;
   text-align: center;
   color: var(--title);
 
@@ -819,7 +536,7 @@ h3 {
   padding-top: 40px;
   text-align: center;
   color: var(--title);
-  margin-top: 40px;
+
 }
 .parent{
  display: flex;
@@ -833,7 +550,7 @@ h3 {
 .narrow p{
   color: white;
   font-size: 20px;
-  padding-top: 4%;
+  padding-top: 7%;
 }
 .wide{
   flex: 1;
@@ -841,8 +558,8 @@ h3 {
   margin-left: 3%;
 }
 .clip{
-  height: 30vh;
-  width: 30vh;
+  height: 370px;
+  width: 370px;
   clip-path: circle(50% at 50% 50%);
   margin-left: 120px;
 }
@@ -903,7 +620,7 @@ h3 {
   border: 2px;
   padding: 2rem;
   border-radius: 5px;
-  border: 3px solid rgb(60, 65, 68);
+  border: 3px solid black;
 
 }
 label{
@@ -915,7 +632,7 @@ label{
 input, textarea{
   display: block;
   width:100%;
-  border: 2px solid rgb(60, 65, 68);
+  border: 2px solid black;
   padding: .5rem;
   font-size: 18px;
   border-radius: 5px;
@@ -976,7 +693,7 @@ input, textarea{
 }
 
 .responsive-image {
-  max-width:50%; /* Ensure the image does not exceed its parent's width */
+  max-width: 60%; /* Ensure the image does not exceed its parent's width */
   height: auto; /* Maintain the aspect ratio of the image */
   display: block; /* Remove any default margins or spacing */
   margin: 0 auto; /* Center the image horizontally */
@@ -1053,11 +770,11 @@ input, textarea{
     width: 90%; /* Adjust width for smaller screens */
   }
 }
+
 .word-line-container {
   display: flex; /* Use flexbox to align items horizontally */
   align-items: center; /* Center items vertically */
   padding: 1% 6%;
-  margin-top: 10px;
 }
 #word-line-container {
   display: flex; /* Use flexbox to align items horizontally */
@@ -1065,7 +782,7 @@ input, textarea{
 }
 .word {
   margin-right: 10px; /* Adjust the margin to control the spacing between the word and the line */
-  color: #7190FF;
+  color: var(--title);
   font-size: 30px;
 }
 
@@ -1073,12 +790,6 @@ input, textarea{
   flex-grow: 1; /* Allow the line to grow and take up available space */
   border-top: 3px solid var(--main-bg); /* You can adjust the line's color, thickness, and style */
   
-}
-#idea{
-  padding-left: 0!important;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-right: 0!important;
 }
 
 
@@ -1182,7 +893,7 @@ input, textarea{
 #narrow{
   /* background-color: lightblue; */
   /* margin-left: 3%; */
-  margin-right: 10%;
+  margin-right: 6%;
   flex-basis: 40%;
   /* background-color: red; */
 }
@@ -1194,7 +905,7 @@ input, textarea{
 #wide{
   flex: 1;
   /* background-color: lightgreen;  */
-  margin-left: 10%;
+  margin-left: 6%;
   padding-right: 10px;
   
 }
@@ -1207,117 +918,3 @@ input, textarea{
  margin-top: 2%;
 }
 
-
-/* typewriter ----------------------------- */
-
-
-.typewriter {
-  /* font-size: clamp(1rem, 3vw + 1rem, 4rem); */
-  position: relative;
-  font-family: "Karla", sans-serif;
-  font-size: 3.5rem;
-  position: relative;
-  width: max-content;
-}
-
-.typewriter::before,
-.typewriter::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.typewriter::before {
-  background: var(--body-bg);
-  animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 1s forwards;
-}
-.typewriter span{
-  color: red;
-}
-
-
-.typewriter::after {
-  width: 0.125em;
-  background: black;
-  animation: typewriter var(--typewriterSpeed)
-      steps(var(--typewriterCharacters)) 1s forwards,
-    blink 750ms steps(var(--typewriterCharacters)) infinite;
-}
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes blink {
-  to {
-    background: transparent;
-  }
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .typewriter {
-    font-size: 2rem; /* Adjust the font size for smaller screens */
-  }
-}
-
-/* Media query for even smaller screens */
-@media screen and (max-width: 768px) {
-  .typewriter {
-    font-size: 1.5rem; /* Further adjust the font size for very small screens */
-  }
-  #idea{
-    margin-right: 10%;
-    /* padding-right: 10px; */
-  }
-  .core{
-    padding-left: 12px;
-  }
-  #wide{
-    margin-right: 10%;
-  }
-  .prev{
-    margin-left: 10%;
-  }
-}
-
-.linkedin{
-  background-color: #0077b5;
-  border: solid 1px black;
-  color: white;
-}
-.cv{
-  border: solid 1px black;
-  background-color: #212529;
-  color: white;
-}
-#features{
-  margin-top: 20px;
-}
-#featuresp{
-  margin-top: 20px;
-}
-.other{
-  margin-left: 10%;
-}
-.links{
-  font-weight: 100;
-}
-.aboutlinks a{
-  text-decoration: underline;
-  transition: .15s;
-}
-.aboutlinks a:hover{
-  color: blue;
-}
