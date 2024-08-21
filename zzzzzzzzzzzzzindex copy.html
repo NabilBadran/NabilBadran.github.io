@@ -1,0 +1,349 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nabil's portfolio</title>
+  
+  <script>
+    // checking local storage
+    let localS = localStorage.getItem('theme')
+    
+    if (localS ==='dark') {
+      document.documentElement.setAttribute('data-theme','dark')
+    }
+    </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=karla">
+  <script src="https://kit.fontawesome.com/3e1ee454ed.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+
+<!------------------------------------ Main sectionn ------------------------------------ -->
+      <!-- <a href="index.html" class="logo">NABIL</a> -->  <!-- <a href="">switch</a> -->
+<section class="hero">
+  <div class="full">
+  <!-- <div id="navbar1" class="navbar1fix item1">
+    <nav>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="https://www.linkedin.com/in/nabil-badran-668651265/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+        <a href="cv.html"><i class="fa-solid fa-file"></i></a>
+        
+      </div>
+      <div id="theme-switcher">
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16"> <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/> </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16"> <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/> </svg>
+      </div>  
+      
+             
+      
+        
+    </nav>
+  </div> -->
+  <div class="topnav" id="myTopnav">
+    <div class="shift">
+    <a href="index.html" class="active">NB.</a>
+    <a id="theme-switcher">
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16"> <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/> </svg>
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16"> <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/> </svg>
+    </a>  
+    <a href="#contact">Contact</a>
+    <a href="#project">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  
+  </div>
+
+<div class="center_both">
+  <div class="centered-element">
+    <a>Hi, I'm <span class="prim-color">Nabil</span><br>
+      Student and Founder of <span class="prim-color">Rixa Technologies</span>.</a>
+    <!-- <h1 class="typewriter"> -->
+      <!-- Software Engineer and Founder of Rixa. -->
+    <!-- </h1> -->
+      <div class="btn-group">
+        <a href="https://www.linkedin.com/in/nabil-badran-668651265/" target="_blank" class="linkedin">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+        <a href="cv.html" target="_blank" class="cv">CV <i class="fa-solid fa-file"></i></a>
+        <a href="https://www.linkedin.com/company/rixa-technologies/about/" target="_blank" class="linkedin">Rixa linkedIn <i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  
+</div>
+
+
+
+</section>
+
+
+
+<!------------------------------------ Skills sectionn ------------------------------------ -->
+
+<h2 class="title2">SKILLS</h2>
+<section class="course">  
+  <div class="row">
+    <div class="course-col skills ">
+
+      <h3>Technical Skills</h3>
+      <p>I have a strong understanding of python. I also know the basic understanding of php and Javascript as I have completed various project that include those languages.</p>
+
+    </div>
+    <div class="course-col skills">
+      <h3>Soft Skills and Qualities</h3>
+
+      <p> Communication, problem solving, critical thinking, initiative-taking, eager to learn
+        with a positive attitude, time management, teamwork, organisation</p>
+
+    </div>
+    <div class="course-col skills">
+      <div id="List">
+
+
+      <h3>Certifications and Achievements </h3>
+        <a>Google Crash Course in Python</a><br>
+        <a>Google Start the UX Design </a><br>
+        <a>Google Foundation of User Experience Design</a> <br>
+        <a>3x Maths Senior Challenge participation</a>
+
+    </div>
+  </div>
+  </div>
+    
+</section>
+
+<section>
+</div>
+<div class="custom-shape-divider-bottom-1687714629">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+  </svg>
+
+</div>
+</section>
+
+
+<!------------------------------------ About sectionn ------------------------------------ -->
+
+<section id="about" class="background">
+  
+  <h2 class="title" id="about-title">About</h2>
+  <div class="parent">
+    <div class="wide"><img class="clip" src="images/Nabil picture3.jpg" alt=""></div>
+    <div class="narrow">
+      <p>
+        I am year 13 A-level student in London studying Maths, Computer Science and Physics. I have been tutoring maths for over a year at a private tuition company where I  identified a problem with the administrative side of the company. <br><br>
+
+
+        Whilst managing my time with GCSE revision I was able to create a new software program that will streamline the administrative tasks by automating it. <br> <br> Allowing the staff and managers to focus on the students than the time consuming admin taks, rasining the level of education recieved by the students
+
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="container">
+  <div class="custom-shape-divider-top-1687714814">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+  </div>
+</section>
+
+<!------------------------------------ Award sectionn ------------------------------------ -->
+<h2 class="title2">AWARDS</h2>
+<section class="course">  
+  <div class="row">
+    <div class="course-col skills award">
+
+      <h3>Young Entreprenuer Award</h3>
+      <img src="images/Young Entrepreneur (2).jpg" alt="">
+      <h2 class="titles">Award:</h2>
+      <h2 class="titles">Date:</h2>
+      <h2 class="titles">Description:</h2>
+
+    </div>
+    <div class="course-col skills award">
+      <h3>Black Tech Founders</h3>
+      <img src="images/blacktechfounders (1).jpg" alt="">
+      <h2 class="titles">Award:</h2>
+      <h2 class="titles">Date:</h2>
+      <h2 class="titles">Description:</h2>
+    </div>
+  </div>
+    
+</section>
+
+
+
+
+
+
+<!------------------------------------ Project sectionn ------------------------------------ -->
+</section>
+
+<section id="project">
+<div>
+  <h2 class="title" id="Projects">PROJECTS <span class="subscript"></span></h2>
+</div>
+<div>
+
+
+
+
+<section class="course">
+
+
+
+  <div class="project-section">
+    <div class="project-imageleft">
+        <img src="images/rsz_makingoftaxi.jpg" alt="Project Image">
+    </div>
+    <div class="project-descriptionleft">
+        <h2>Face ID</h2>
+        <h3>Date of Completion: </h3>
+        <h3>Brief Overview:</h3>
+        <ul>
+          <li>asd</li>
+          <li>asss</li>
+          <li>asd</li>
+        </ul>
+        <h3>Project Tags: </h3>
+        <p>Soldering, </p>
+        <div class="button-wrapper">
+          <a href="working_progress.html" >Case study<i class="fa-brands fa-python"></i></a>
+          
+          <!-- <a href="face_id.html" >Case study</a> -->
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="project-section">
+  <div class="project-descriptionright">
+    <h2>Taxi Bird</h2>
+    <h3>Date of Completion: </h3>
+    <h3>Brief Overview:</h3>
+    <ul>
+      <li>asd</li>
+      <li>asss</li>
+      <li>asd</li>
+    </ul>
+    <h3>Project Tags: </h3>
+    <p>Soldering, </p>
+    <div class="button-wrapper">
+      <a href="working_progress.html" >Case study<i class="fa-brands fa-python"></i></a>
+      
+      <!-- <a href="face_id.html" >Case study</a> -->
+    </div>
+  </div>
+  <div class="project-imageright">
+      <img src="images/rsz_makingoftaxi.jpg" alt="Project Image">
+  </div>
+   
+</div>
+<br>
+<br>
+<br>
+<br>
+<br> 
+
+<div class="project-section">
+  <div class="project-imageleft"> 
+      <img src="images/rsz_makingoftaxi.jpg" alt="Project Image">
+  </div>
+  <div class="project-descriptionleft">
+      <h2>Macro Pad</h2>
+      <h3>Date of Completion: </h3>
+      <p>10/02/2022</p>
+      <h3>Brief Overview:</h3>
+      <ul>
+        <li>asd</li>
+        <li>asss</li>
+        <li>asd</li>
+      </ul>
+      <h3 id="Tags">Project Tags: </h3>
+      <p>Soldering, </p>
+      <div class="button-wrapper">
+        <a href="working_progress.html" >Case study<i class="fa-brands fa-python"></i></a>
+        
+        <!-- <a href="face_id.html" >Case study</a> -->
+      </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="custom-shape-divider-bottom-1687718278">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+  </svg>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -----------------------------------------contact section-------------------------------------- -->
+<section id="contact" class="background">
+<div>
+  <p id="testingg"></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+</section>
+
+<script src="script copy.js"></script>
+</body>
+</html>
