@@ -1279,8 +1279,36 @@ h2{
     font-size: 1.2em;
   }
 }
+a.external-link {
+  color: #007bff; /* Blue color for the text */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the link bold */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 
+/* Hover effects */
+a.external-link:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
 
+a.local-link:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
+
+/* Open link in new tab indicator (optional) */
+a.external-link::after {
+  content: ' ↗'; /* Add an icon to indicate external link */
+  font-size: 0.8em;
+}
+
+a.local-link {
+  color: #007bff; /* Blue color for the text */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the link bold */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 
 /* -------------------------------------------------- NEWWWW------------------------------------------------------------ */
 /* 
@@ -1550,6 +1578,12 @@ font-size: 2em;
   text-align: left;
   padding-left: 20px;
 }
+
+.subtext{
+  font-size: 0.65em;
+  font-weight: normal;
+}
+
 .course-col img{
   margin-bottom: 20px;
 
